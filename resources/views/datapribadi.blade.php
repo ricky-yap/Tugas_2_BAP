@@ -92,7 +92,7 @@
 <section id="home-banner" style="background-image: url(img/b-1.jpg);">
   <div class="content">
     <div class="container"  data-wow-duration="1s"> 
-      <span class="wow fadeIn" style="font-family:Helvetica, sans-serif;">Ricky Yap</span>
+      <span class="wow fadeIn" style="font-family:Helvetica, sans-serif;">Ricky aja</span>
       <h1 class="wow fadeInUp">Hello, I'm a <span>UI/UX Designer</span>
     </div>
   </div>
