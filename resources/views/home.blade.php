@@ -91,7 +91,7 @@
 		            	<li class="d-flex"><span>Name:</span> <span>Ricky</span></li>
 		            	<li class="d-flex"><span>Date of birth:</span> <span>February 28, 2002</span></li>
 		            	<li class="d-flex"><span>Address:</span> <span>UPH Medan Lippo Plaza Campus</span></li>
-		            	<li class="d-flex"><span>Zip code:</span> <span>20112</span></span></li>
+		            	{{-- <li class="d-flex"><span>Zip code:</span> <span>20112</span></span></li> --}}
 		            	<li class="d-flex"><span>Email:</span> <span>ricky.yap@icloud.com</span></li>
 		            	<li class="d-flex"><span>Phone: </span> <span>+62 811 656 8868</span></li>
 		            </ul>
