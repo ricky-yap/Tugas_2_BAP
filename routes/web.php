@@ -14,13 +14,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
-Route::get('/welcome', function () {
-    return view('datapribadi');
+Route::get('/about', function () {
+    return view('about_me');
 });
 
-Route::get('/home', function () { //path di address bar, trus href html pakai nama ini TOK
-    return view(''); // datapribadi --> nama file di views (datapribadi.blade.php)
+Route::get('/experiences', function () { //path di address bar, trus href html pakai nama ini TOK
+    return view('experiences'); // datapribadi --> nama file di views (datapribadi.blade.php)
+});
+
+Route::get('/awards', function () { 
+    return view('awards'); 
+});
+
+Route::get('/contact', function () { 
+    return view('contact'); 
 });
