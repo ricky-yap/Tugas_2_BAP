@@ -38,6 +38,7 @@
 	          <li class="nav-item"><a href="/#about-section" class="nav-link"><span>About Me</span></a></li>
 	          <li class="nav-item"><a href="experiences" class="nav-link"><span>Experiences</span></a></li>
 	          <li class="nav-item"><a href="awards" class="nav-link"><span>Awards</span></a></li>
+	          <li class="nav-item"><a href="lihatKRS" class="nav-link"><span>Lihat KRS</span></a></li>
 	          <li class="nav-item"><a href="contact" class="nav-link"><span>Contact</span></a></li>
 	        </ul>
 	      </div>

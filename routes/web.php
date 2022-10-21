@@ -32,3 +32,8 @@ Route::get('/awards', function () {
 Route::get('/contact', function () { 
     return view('contact'); 
 });
+
+Route::get('/lihatkrs', function () { 
+    return view('lihatKRS'); 
+});
+
