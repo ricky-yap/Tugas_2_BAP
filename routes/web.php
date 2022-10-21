@@ -33,7 +33,7 @@ Route::get('/contact', function () {
     return view('contact'); 
 });
 
-Route::get('/lihatkrs', function () { 
-    return view('lihatKRS'); 
+Route::get('/lihatKRS', function () { 
+    return view('lihatkrs'); 
 });
 
