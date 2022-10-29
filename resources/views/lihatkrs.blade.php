@@ -87,17 +87,24 @@
                 </tr>
                 <tr>
                     <td>Total SKS</td>
-                    <td><?php
+                    <td>
+                      <?php
+                      // $mahasiswas = vm_27::get();
+                      $mahasiswas = DB::table('VMHS_MATKUL')
+                                  ->where('STUDENTID', '03081200006')
+                                  ->get();  
+                      $total= 0;
 
-                        $total=0;
-                        $id=1;
-                        while($id<6){                    
-                            $temp = $total + DB::table('vmhs_matkul')->where('STUDENTID', '03081200006')->value('sks');
-                            $total = $temp;
-                            $id++;
-                        }
-                        echo "<td>".$total."</td>";
-                        ?>  </td>
+                      // foreach ($array as $value) {
+                      //   code to be executed;
+                      // }
+                      
+                      foreach ($mahasiswas as $VMHS_MATKUL) {
+                        $total+=$VMHS_MATKUL->sks;
+                      }
+                      echo "<td>".$total."</td>";
+                      ?>  
+                      </td>
                 </tr>
             </table>
             <br>
@@ -114,30 +121,22 @@
                   </tr>
                 </thead>
                 <tbody>
-                    <?php
-                        $result = DB::table('VMHS_MATKUL')
+                <?php
+                // $mahasiswas = vm_27::get();
+                $mahasiswas = DB::table('VMHS_MATKUL')
                             ->where('STUDENTID', '03081200006')
-                            ->get();   
-                        
-                            $totalSKS = 0;
-
-                        for ($x = 0; $x <= count($result) - 1; $x++) {
-                            $row = $result[$x];
-                            $number = $x + 1;
-
-                            
-
-                            $json = json_decode(json_encode($row), true);
-                            $totalSKS+=$json['sks'];
-                            echo "<tr>";
-                            echo "<td>".$number."</td>";                        
-                            echo "<td>".$json['kode_matakuliah']."</td>";
-                            echo "<td>".$json['nama_matakuliah']."</td>";
-                            echo "<td>".$json['sks']."</td>";
-                            echo "<td style='text-align:center'></td>";
-                            echo "</tr>";
-                        } 
-                    ?>
+                            ->get();  
+                $no = 1;
+                foreach ($mahasiswas as $VMHS_MATKUL) {
+                    echo '<tr>';
+                    echo '<td>' . $no . '</td>';
+                    echo '<td>' . $VMHS_MATKUL->kode_matakuliah . '</td>';
+                    echo '<td>' . $VMHS_MATKUL->nama_matakuliah . '</td>';
+                    echo '<td>' . $VMHS_MATKUL->sks . '</td>';
+                    echo '</tr>';
+                    $no++;
+                }
+                ?>
                 </tbody>
               </table>
         

@@ -37,3 +37,9 @@ Route::get('/lihatKRS', function () {
     return view('lihatkrs'); 
 });
 
+Route::get('/admin', function () { 
+    return view('admin'); 
+});
+
+
+
