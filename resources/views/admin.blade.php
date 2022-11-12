@@ -288,7 +288,32 @@
                 </tr>
                 <tr>
                     <td>IPK</td>
-                    <td>4.00</td>
+                    <td>
+                        <?php
+                        // $mahasiswas = vm_27::get();
+                        $mahasiswas = DB::table('VMHS_KHS')
+                                    ->where('STUDENTID', '03081200006')
+                                    ->get();  
+                        $total= 0;
+                        $totalSKS=0;
+  
+                        // foreach ($array as $value) {
+                        //   code to be executed;
+                        // }
+                        
+                        foreach ($mahasiswas as $VMHS_KHS) {
+                            $sks=$VMHS_KHS->sks;
+                            $nilaihuruf=4;
+                            $tmp=($sks*$nilaihuruf);  
+                          $total+=$tmp;
+                          $totalSKS+=$sks;
+                        }
+
+                        $IPK=($total/$totalSKS);
+                        echo "<td>".$IPK."</td>";
+                        ?>  
+
+                    </td>
                 </tr>
             </table>
             <br>
